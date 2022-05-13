@@ -8,6 +8,11 @@ namespace OOP_Hamburgerci
 {
     public class Menu
     {
-      
+        public string MenuAdi { get; set; }
+        public decimal Fiyati { get; set; }
+        public override string ToString()
+        {
+            return MenuAdi + " Menü";
+        }
     }
 }

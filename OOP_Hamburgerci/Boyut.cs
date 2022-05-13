@@ -8,6 +8,6 @@ namespace OOP_Hamburgerci
 {
     public enum Boyut
     {
-        
+        Kucuk,Orta,Buyuk
     }
 }

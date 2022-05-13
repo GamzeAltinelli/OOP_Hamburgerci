@@ -64,14 +64,14 @@ namespace OOP_Hamburgerci
             // tsmSiparisOlustur
             // 
             this.tsmSiparisOlustur.Name = "tsmSiparisOlustur";
-            this.tsmSiparisOlustur.Size = new System.Drawing.Size(191, 26);
+            this.tsmSiparisOlustur.Size = new System.Drawing.Size(224, 26);
             this.tsmSiparisOlustur.Text = "Sipariş Oluştur";
             this.tsmSiparisOlustur.Click += new System.EventHandler(this.tsmSiparisOlustur_Click);
             // 
             // tsmSiparisBilgileri
             // 
             this.tsmSiparisBilgileri.Name = "tsmSiparisBilgileri";
-            this.tsmSiparisBilgileri.Size = new System.Drawing.Size(191, 26);
+            this.tsmSiparisBilgileri.Size = new System.Drawing.Size(224, 26);
             this.tsmSiparisBilgileri.Text = "Sipariş Bilgileri";
             this.tsmSiparisBilgileri.Click += new System.EventHandler(this.tsmSiparisBilgileri_Click);
             // 
