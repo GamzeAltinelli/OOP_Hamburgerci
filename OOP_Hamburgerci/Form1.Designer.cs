@@ -72,6 +72,7 @@ namespace OOP_Hamburgerci
             // 
             // cmbMenuler
             // 
+            this.cmbMenuler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMenuler.FormattingEnabled = true;
             this.cmbMenuler.Location = new System.Drawing.Point(13, 175);
             this.cmbMenuler.Name = "cmbMenuler";

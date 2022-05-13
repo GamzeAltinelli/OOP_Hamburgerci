@@ -65,5 +65,9 @@ namespace OOP_Hamburgerci
 
         }
 
+        private void MyMDIForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

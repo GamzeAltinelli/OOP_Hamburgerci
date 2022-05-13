@@ -64,14 +64,14 @@ namespace OOP_Hamburgerci
             // tsmSiparisOlustur
             // 
             this.tsmSiparisOlustur.Name = "tsmSiparisOlustur";
-            this.tsmSiparisOlustur.Size = new System.Drawing.Size(224, 26);
+            this.tsmSiparisOlustur.Size = new System.Drawing.Size(191, 26);
             this.tsmSiparisOlustur.Text = "Sipariş Oluştur";
             this.tsmSiparisOlustur.Click += new System.EventHandler(this.tsmSiparisOlustur_Click);
             // 
             // tsmSiparisBilgileri
             // 
             this.tsmSiparisBilgileri.Name = "tsmSiparisBilgileri";
-            this.tsmSiparisBilgileri.Size = new System.Drawing.Size(224, 26);
+            this.tsmSiparisBilgileri.Size = new System.Drawing.Size(191, 26);
             this.tsmSiparisBilgileri.Text = "Sipariş Bilgileri";
             this.tsmSiparisBilgileri.Click += new System.EventHandler(this.tsmSiparisBilgileri_Click);
             // 
@@ -104,11 +104,13 @@ namespace OOP_Hamburgerci
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MyMDIForm";
             this.Text = "MyMDIForm";
+            this.Load += new System.EventHandler(this.MyMDIForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
