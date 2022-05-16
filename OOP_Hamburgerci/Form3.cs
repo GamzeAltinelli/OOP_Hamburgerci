@@ -19,7 +19,9 @@ namespace OOP_Hamburgerci
 
         private void btnEkstraEkle_Click(object sender, EventArgs e)
         {
-            
+            Form1.ektraMalzemeler.Add(new Ekstra { EkstraAdi = txtEkstraAdi.Text, Fiyat = nmrEkstraFiyati.Value });
+            Fonksiyon.Temizle(this.Controls);
+            MessageBox.Show("Ekstra malzeme eklenmiştir.");
         }
 
         private void grpEkstraMalzEkle_Enter(object sender, EventArgs e)

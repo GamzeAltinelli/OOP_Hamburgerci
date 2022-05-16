@@ -19,8 +19,10 @@ namespace OOP_Hamburgerci
 
         private void btnMenuEkle_Click(object sender, EventArgs e)
         {
-            
+            Form1.menuler.Add(new Menu { MenuAdi = txtMenuAdi.Text, Fiyati = nmrMenuFiyati.Value });
             // TODO: Ekledikten sonra Temizle metodunu çağıralım.
+            Fonksiyon.Temizle(this.Controls);
+            MessageBox.Show("Menü Başarılı Şekilde Eklenmiştir.");
             
         }
 

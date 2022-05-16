@@ -19,7 +19,24 @@ namespace OOP_Hamburgerci
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            
+            decimal ciro = 0,ekstraMalzemeGeliri=0;
+            int satisAdedi = 0;
+
+            foreach (Siparis siparis in Form1.tumSiparisler)
+            {
+                ciro += siparis.ToplamTutar;
+                foreach (Ekstra ekstra in siparis.EkstaMalzemeler)
+                {
+                    ekstraMalzemeGeliri += ekstra.Fiyat;
+                }
+                satisAdedi += siparis.Adet;
+                lbxTumSiparisler.Items.Add(siparis);
+            }
+            lblToplamSiparisSayisi.Text = lbxTumSiparisler.Items.Count.ToString();
+            lblCiro.Text = ciro.ToString("C2");
+            lblEkstraMalzemeGeliri.Text = ekstraMalzemeGeliri.ToString("C2");
+            lblSatilanUrunAdedi.Text = satisAdedi.ToString();
+
         }
     }
 }

@@ -17,11 +17,11 @@ namespace OOP_Hamburgerci
             InitializeComponent();
         }
 
-        List<Siparis> tumSiparisler = new List<Siparis>();
-        List<Siparis> mevcutSiparisler = new List<Siparis>();
+        public static List<Siparis> tumSiparisler = new List<Siparis>();
+        public static List<Siparis> mevcutSiparisler = new List<Siparis>();
 
 
-        List<Menu> menuler = new List<Menu>()
+        public static List<Menu> menuler = new List<Menu>()
         {
             new Menu{MenuAdi="Big King",Fiyati=62.00M},
             new Menu{MenuAdi="Double King Chicken",Fiyati=52.00M},
@@ -29,7 +29,7 @@ namespace OOP_Hamburgerci
             new Menu{MenuAdi="Whooper",Fiyati=70.00M}
 
         };
-        List<Ekstra> ektraMalzemeler = new List<Ekstra>()
+        public static List<Ekstra> ektraMalzemeler = new List<Ekstra>()
         {
             new Ekstra{ EkstraAdi="Ketçap",Fiyat=0},
             new Ekstra{ EkstraAdi="Mayonez",Fiyat=0},
@@ -47,7 +47,8 @@ namespace OOP_Hamburgerci
 
             foreach (Ekstra ekstra in ektraMalzemeler)
             {
-                flpEkstraMalzemeler.Controls.Add(new CheckBox() { Text = ekstra.EkstraAdi, Tag = ekstra });
+                flpEkstraMalzemeler.Controls.Add(new CheckBox() { Text = ekstra.EkstraAdi, Tag = ekstra,Width=ekstra.EkstraAdi.Length+200});
+                
             }
             foreach (Siparis siparis in mevcutSiparisler)
             {
@@ -73,6 +74,7 @@ namespace OOP_Hamburgerci
 
         private void btnSiparisiEkle_Click(object sender, EventArgs e)
         {
+           
             Siparis yeniSiparis = new Siparis();
             yeniSiparis.SeciliMenu = (Menu)cmbMenuler.SelectedItem;
             if (rdoKucuk.Checked)
@@ -90,6 +92,7 @@ namespace OOP_Hamburgerci
             yeniSiparis.EkstaMalzemeler = new List<Ekstra>();
             foreach (CheckBox item in flpEkstraMalzemeler.Controls)
             {
+                
                 if (item.Checked)
                 {
                     yeniSiparis.EkstaMalzemeler.Add((Ekstra)item.Tag);
@@ -101,6 +104,7 @@ namespace OOP_Hamburgerci
             mevcutSiparisler.Add(yeniSiparis);
             lbxSiparisler.Items.Add(yeniSiparis);
             TutarHesapla();
+            Fonksiyon.Temizle(this.Controls);
 
         }
 

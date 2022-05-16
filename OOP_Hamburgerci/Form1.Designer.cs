@@ -135,6 +135,7 @@ namespace OOP_Hamburgerci
             // 
             // flpEkstraMalzemeler
             // 
+            this.flpEkstraMalzemeler.AutoScroll = true;
             this.flpEkstraMalzemeler.Location = new System.Drawing.Point(12, 297);
             this.flpEkstraMalzemeler.Name = "flpEkstraMalzemeler";
             this.flpEkstraMalzemeler.Size = new System.Drawing.Size(249, 192);
